@@ -1,0 +1,110 @@
+body {
+  font-family: "Albert Sans", sans-serif;
+  background-image: url("images/sky.jpg");
+  background-size: 100%;
+}
+p {
+  text-align: center;
+  font-size: 27px;
+  margin-bottom: 14px;
+  padding: 5px;
+}
+label {
+  font-size: 20px;
+}
+hr {
+  margin-top: 20px;
+}
+img {
+  width: 100px;
+}
+
+.search-input {
+  width: 30%;
+  height: 57px;
+  background-color: #fafafa94;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: #fff;
+  padding: 5px;
+  font-size: 22px;
+}
+.search-sign {
+  height: 57px;
+  margin-top: 15px;
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: #fff;
+  transition: all 150ms ease-in-out;
+}
+.search-sign:hover {
+  background-color: #fafafa63;
+  border-radius: 5px;
+}
+.button-location {
+  background-color: #fafafa94;
+  margin-top: 15px;
+  margin-right: 0px;
+  border-radius: 10px;
+  border: #fff;
+  padding: 12px;
+  font-size: 20px;
+  color: #1f1f1fcd;
+  transition: all 150ms ease-in-out;
+}
+.button-location:hover {
+  background-color: #fafafa63;
+  box-shadow: -1px -1px 23px 12px rgba(163, 164, 164, 0.2);
+}
+.app-display-wrapper {
+  display: block;
+  max-width: 800px;
+  margin: 70px auto 0;
+}
+.app-display {
+  padding: 30px;
+  background-color: #fafafa63;
+  border-radius: 35px;
+  box-shadow: 8px 13px 24px 12px rgba(0, 0, 0, 0.2);
+}
+.current-location {
+  font-size: 50px;
+  font-weight: 400;
+}
+.current-date {
+  display: block;
+  font-size: 38px;
+  text-align: right;
+  font-weight: 300;
+}
+.current-temp {
+  font-size: 48px;
+}
+.current-temp img {
+  margin-top: -7px;
+}
+ul {
+  display: inline;
+  list-style: none;
+  margin: 15px 0 0;
+  position: relative;
+}
+.week {
+  font-size: 22px;
+  display: block;
+  text-align: center;
+}
+.day-forecast {
+  background-color: #e3f6f5bf;
+  width: 115px;
+  border-radius: 18px;
+  padding: 5px;
+}
+.forecast-temp-min-max {
+  display: block;
+  text-align: center;
+  font-size: 27px;
+  margin-bottom: 14px;
+  padding: 5px;
+}
