@@ -122,11 +122,12 @@ function currentWeather(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=7b3a77a5c1a8ebaa302785b7cb6888c7`;
   axios.get(apiUrl).then(showWeather);
 }
+
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(currentWeather);
 }
 
-searchCity("New York");
+searchCity("Kyiv");
 
 let currentLocationButton = document.querySelector("#device-location");
 currentLocationButton.addEventListener("click", getCurrentPosition);
