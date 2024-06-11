@@ -12,6 +12,10 @@ p {
 label {
   font-size: 20px;
 }
+li{
+  font-size: 20px;
+  line-height: 45px;
+}
 h2{
   font-size: 38px;
 }
@@ -65,15 +69,21 @@ img {
   max-width: 800px;
   margin: 70px auto 0;
 }
-.app-display,.map-display {
+.app-display,.map-display, .desc-display {
   padding: 30px;
   background-color: #fafafa63;
   border-radius: 35px;
   box-shadow: 8px 13px 24px 12px rgba(0, 0, 0, 0.2);
 }
+.desc-display{
+  height: 380px;
+  display: block;
+  margin: 20px auto 0;
+
+}
 .map-display{
   max-width: 80%;
-  display: auto;
+  display: block;
   margin: 20px auto 0;
 }
 .map-display span{
@@ -122,6 +132,6 @@ ul {
   padding: 5px;
 }
 #map{
-  height:330px;
+  height:320px;
   width: 100%;
 }

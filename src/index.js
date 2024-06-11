@@ -75,6 +75,7 @@ function showWeather(response) {
 
   searchForecast(response.data.coord);
   initMap(response.data.coord);
+  displayDescription(response.data)
 }
 
 function formatForecastDate(timestamp) {
@@ -128,6 +129,26 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(currentWeather);
 }
 
+
+function displayDescription(data){
+  console.log(data);
+  let temp = Math.round(data.main.feels_like);
+  let feelTemp = document.querySelector("#desc-temp");
+  feelTemp.innerHTML = `Feels like: ${temp}°C`;
+
+  let weatherDesc = document.querySelector("#desc-main");
+  weatherDesc.innerHTML = `${data.weather[0].description}`;
+
+  let minTemp = document.querySelector("#desc-min");
+  minTemp.innerHTML = `Min: ${Math.round(data.main.temp_min)}°C`;
+
+  let maxTemp = document.querySelector("#desc-max");
+  maxTemp.innerHTML = `Max: ${Math.round(data.main.temp_max)}°C`;
+
+  let curClo = document.querySelector("#desc-clo");
+  curClo.innerHTML = `Cloudiness: ${data.clouds.all}%`;
+}
+//interactive map
 let map;
 
 async function initMap(coordinates) {
