@@ -74,6 +74,7 @@ function showWeather(response) {
   currentIcon.setAttribute("alt", `${response.data.weather[0].description}`);
 
   searchForecast(response.data.coord);
+  initMap(response.data.coord);
 }
 
 function formatForecastDate(timestamp) {
@@ -127,7 +128,27 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(currentWeather);
 }
 
+let map;
+
+async function initMap(coordinates) {
+  let position = { lat: coordinates.lat, lng: coordinates.lon };
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  map = new Map(document.getElementById("map"), {
+    zoom: 12,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+  });
+}
+
 searchCity("Kyiv");
+
 
 let currentLocationButton = document.querySelector("#device-location");
 currentLocationButton.addEventListener("click", getCurrentPosition);

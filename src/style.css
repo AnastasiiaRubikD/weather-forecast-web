@@ -12,6 +12,9 @@ p {
 label {
   font-size: 20px;
 }
+h2{
+  font-size: 38px;
+}
 hr {
   margin-top: 20px;
 }
@@ -62,13 +65,23 @@ img {
   max-width: 800px;
   margin: 70px auto 0;
 }
-.app-display {
+.app-display,.map-display {
   padding: 30px;
   background-color: #fafafa63;
   border-radius: 35px;
   box-shadow: 8px 13px 24px 12px rgba(0, 0, 0, 0.2);
 }
-.current-location {
+.map-display{
+  max-width: 80%;
+  display: auto;
+  margin: 20px auto 0;
+}
+.map-display span{
+  display: block;
+  margin: 10px auto;
+  font-size: 22px;
+}
+.current-location{
   font-size: 50px;
   font-weight: 400;
 }
@@ -107,4 +120,8 @@ ul {
   font-size: 27px;
   margin-bottom: 14px;
   padding: 5px;
+}
+#map{
+  height:330px;
+  width: 100%;
 }
