@@ -99,7 +99,7 @@ function displayForecast(response) {
                 <span class="week">${formatForecastDate(forecastDay.dt)}</span>
                 <div class="day-forecast">
                   <img
-                    src="http://openweathermap.org/img/wn/${
+                    src="https://openweathermap.org/img/wn/${
                       forecastDay.weather[0].icon
                     }@2x.png"
                     alt="${forecastDay.weather[0].description}"
